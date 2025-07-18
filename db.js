@@ -1,7 +1,5 @@
 const { Pool } = require('pg');
 
-
-// Render provides a DATABASE_URL. Use it if available.
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     // Add SSL configuration for Render, but not for local development
@@ -34,7 +32,7 @@ const createTable = async () => {
     }
 };
 
-// Initialize the table when the application starts
+
 createTable();
 
 module.exports = {

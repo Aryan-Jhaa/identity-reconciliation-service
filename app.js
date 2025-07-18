@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const bodyParser = require('body-parser');
-require('./db'); // Initialize database connection and table
+require('./db'); 
 const identifyRouter = require('./routes/identify');
 
 const app = express();
@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
     res.send('Identity Reconciliation Service is running! 🚀');
 });
 
-// Main endpoint for identity reconciliation
 app.use('/identify', identifyRouter);
 
 app.listen(PORT, () => {
