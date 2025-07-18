@@ -1,12 +1,13 @@
 const { Pool } = require('pg');
 
 // Configure your PostgreSQL connection details
+const { Pool } = require('pg');
+
+// Render provides a DATABASE_URL. Use it if available.
 const pool = new Pool({
-    user: 'postgres',                   // The user you configured
-    host: 'localhost',
-    database: 'identity_db',            // The database you created
-    password: 'sepecat',   // The password you set
-    port: 5432,
+    connectionString: process.env.DATABASE_URL,
+    // Add SSL configuration for Render, but not for local development
+    ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false,
 });
 
 const createTable = async () => {
