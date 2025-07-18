@@ -1,0 +1,17 @@
+{
+  "name": "identity-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "start": "node app.js"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
