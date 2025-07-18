@@ -1,7 +1,5 @@
 const { Pool } = require('pg');
 
-// Configure your PostgreSQL connection details
-const { Pool } = require('pg');
 
 // Render provides a DATABASE_URL. Use it if available.
 const pool = new Pool({
